@@ -4,9 +4,10 @@ import { Crown, ArrowRight } from 'lucide-react';
 
 interface PremiumBannerProps {
   onUpgrade?: () => void;
+  message?: string;
 }
 
-export function PremiumBanner({ onUpgrade }: PremiumBannerProps) {
+export function PremiumBanner({ onUpgrade, message }: PremiumBannerProps) {
   return (
     <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-xl text-white mb-6 animate-slide-up">
       <div className="flex items-center justify-between">
@@ -19,7 +20,7 @@ export function PremiumBanner({ onUpgrade }: PremiumBannerProps) {
               Upgrade to Premium
             </h3>
             <p className="text-white text-opacity-90 text-xs">
-              Advanced analytics & optimization
+              {message || 'Advanced analytics & optimization'}
             </p>
           </div>
         </div>
