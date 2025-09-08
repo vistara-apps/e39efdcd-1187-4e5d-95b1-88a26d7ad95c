@@ -1,0 +1,111 @@
+import { Transaction, Subscription, PaymentSummary, PaymentNotification } from './types';
+
+export const mockTransactions: Transaction[] = [
+  {
+    transactionId: '1',
+    accountId: 'acc1',
+    userId: 'user1',
+    description: 'Farcaster Degen Ethereum',
+    amount: 19.99,
+    currency: 'USD',
+    type: 'subscription',
+    date: '2024-01-15',
+    status: 'pending',
+    isRecurring: true,
+    dueDate: '2024-01-20',
+  },
+  {
+    transactionId: '2',
+    accountId: 'acc1',
+    userId: 'user1',
+    description: 'Usdy 1539.29745',
+    amount: 2.45,
+    currency: 'USD',
+    type: 'payment',
+    date: '2024-01-10',
+    status: 'completed',
+    isRecurring: false,
+    dueDate: '2024-01-18',
+  },
+  {
+    transactionId: '3',
+    accountId: 'acc1',
+    userId: 'user1',
+    description: 'Figament due 519.074 2016',
+    amount: 18.75,
+    currency: 'USD',
+    type: 'subscription',
+    date: '2024-01-12',
+    status: 'pending',
+    isRecurring: true,
+    dueDate: '2024-01-22',
+  },
+  {
+    transactionId: '4',
+    accountId: 'acc1',
+    userId: 'user1',
+    description: 'Selling Carday Dstates',
+    amount: 1.50,
+    currency: 'USD',
+    type: 'payment',
+    date: '2024-01-14',
+    status: 'completed',
+    isRecurring: false,
+    dueDate: '2024-01-25',
+  },
+];
+
+export const mockSubscriptions: Subscription[] = [
+  {
+    subscriptionId: '1',
+    userId: 'user1',
+    serviceName: 'Farcaster Pro',
+    billingCycle: 'monthly',
+    nextBillingDate: '2024-01-20',
+    amount: 19.99,
+    currency: 'USD',
+    status: 'active',
+    category: 'Social',
+  },
+  {
+    subscriptionId: '2',
+    userId: 'user1',
+    serviceName: 'Figma Pro',
+    billingCycle: 'monthly',
+    nextBillingDate: '2024-01-22',
+    amount: 18.75,
+    currency: 'USD',
+    status: 'active',
+    category: 'Design',
+  },
+];
+
+export const mockPaymentSummary: PaymentSummary = {
+  totalDue: 773.00,
+  upcomingPayments: mockTransactions.filter(t => t.status === 'pending'),
+  recentTransactions: mockTransactions.filter(t => t.status === 'completed'),
+  subscriptions: mockSubscriptions,
+};
+
+export const mockNotifications: PaymentNotification[] = [
+  {
+    id: '1',
+    type: 'reminder',
+    title: 'Payment Due Soon',
+    message: 'Farcaster Pro subscription due in 2 days',
+    amount: 19.99,
+    dueDate: '2024-01-20',
+    isRead: false,
+    createdAt: '2024-01-18T10:00:00Z',
+  },
+  {
+    id: '2',
+    type: 'overdue',
+    title: 'Payment Overdue',
+    message: 'Figma Pro payment is 1 day overdue',
+    amount: 18.75,
+    dueDate: '2024-01-17',
+    isRead: false,
+    createdAt: '2024-01-18T09:00:00Z',
+  },
+];
