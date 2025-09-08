@@ -1,0 +1,14 @@
+{
+  "name": "PayNoti",
+  "description": "PayNoti is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://e39efdcd-1187-4e5d-95b1-88a26d7ad95c.vercel.app",
+  "properties": {
+    "app": {
+      "name": "PayNoti",
+      "description": "PayNoti is a Base Mini App built with Zara.",
+      "url": "https://e39efdcd-1187-4e5d-95b1-88a26d7ad95c.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}

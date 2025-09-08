@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "PayNoti",
+    "subtitle": "Built with Zara",
+    "description": "PayNoti is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app",
+    "splashImageUrl": "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app/image.png",
+    "tagline": "PayNoti",
+    "screenshotUrls": [
+      "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app/screenshot.png",
+      "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://e39efdcd11874e5d95b188a26d7ad95c-13a8.vercel.app/api/webhook"
+  }
+}
